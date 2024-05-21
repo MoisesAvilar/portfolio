@@ -1,0 +1,28 @@
+.arrow {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffffff1a;
+    color: #6464ff5e;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+    z-index: 1;
+  }
+  
+  .arrow:hover {
+    background-color: #2e2e2e;
+    color: #6464ff;
+    border: 1px solid #6464ff;
+  }
+  
+  .arrow svg {
+    width: 30px;
+    height: 30px;
+  }

@@ -1,0 +1,29 @@
+.footer {
+    color: white;
+    padding: 2%;
+    text-align: center;
+}
+
+.list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.item {
+    font-size: 1.5em;
+    padding: .5em 1em;
+}
+
+.item a {
+    color: white;
+}
+
+.item a:hover {
+    color: #6464ff;
+    transition: .5s ease;
+}
+
+.footer p {
+    font-size: .7em;
+}

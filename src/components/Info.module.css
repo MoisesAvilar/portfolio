@@ -1,0 +1,32 @@
+.logo {
+    width: 150px;
+    border-radius: 50%;
+    border: 1px solid #6464ff;
+    padding: .1em;
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.head h1 {
+    font-size: 2em
+}
+
+.head p {
+    text-align: center;
+    margin-top: .5em;
+    font-size: 1em
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 1em;
+    font-size: 30px;
+    margin-top: 1em;
+}
