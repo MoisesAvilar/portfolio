@@ -1,18 +1,26 @@
 .technologies {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
 }
 
 .list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    list-style: none;
-    margin: 1em;
 }
 
-.list li {
-    width: 50px;
-    margin: 0 .5em;
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
 }
+
+.item img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+

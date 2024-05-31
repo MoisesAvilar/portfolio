@@ -3,25 +3,20 @@ import styles from "./AboutMe.module.css"
 
 function AboutMe() {
   return (
-    <div className={`${commonStyles.about_meContainer} ${styles.about_me}`} data-aos="fade-up">
+    <div
+      className={`${commonStyles.about_meContainer} ${styles.about_me}`}
+      data-aos="fade-up"
+    >
       <h2>Sobre mim</h2>
+      <p>Fascinado por tecnologia e amante de programação.</p>
       <p>
-        Desde criança, sempre tive interesse em compreender como funciona as
-        coisas ao meu redor. Cresci assistindo videos e documentários com meu
-        pai sobre motores, o corpo humano e construção de casas, enquanto também
-        dominava o uso de diversos equipamentos eletrônicos em casa, desde
-        videogames até celulares da época.
+        Meu foco é ingressar no mercado de trabalho como desenvolvedor backend
+        ou desenvolvedor web.
       </p>
       <p>
-        Uni o util ao agradável e comecei a estudar programação como autodidata
-        em Setembro de 2022 através do canal Curso Em Video, do renomado Prof.
-        Gustavo Guanabara.
-      </p>
-      <p>
-        Desde então, venho estudando e aprimorando meu conhecimento através de
-        projetos pessoais e videos no YouTube. Em Março de 2024, decidi dar o
-        próximo passo em minha jornada e iniciar o curso de Análise e
-        Desenvolvimento de Sistemas na Faculdade Anhanguera.
+        Estudo programação desde Setembro de 2023 como autodidata. Em Março de
+        2024 comecei a cursar Análise e Desenvolvimento de Sistemas na Faculdade
+        Pitágoras e nas minhas horas vagas tenho me dedicado a aprender sobre React e frontend.
       </p>
     </div>
   )

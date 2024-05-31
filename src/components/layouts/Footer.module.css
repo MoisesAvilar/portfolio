@@ -1,29 +1,38 @@
 .footer {
-    color: white;
-    padding: 2%;
-    text-align: center;
+  background-color: #000;
+  color: white;
+  padding: 2%;
+  text-align: center;
 }
 
 .list {
-    display: flex;
-    justify-content: center;
-    list-style: none;
+  display: flex;
+  justify-content: center;
+  list-style: none;
 }
 
 .item {
-    font-size: 1.5em;
-    padding: .5em 1em;
+  font-size: 1.5em;
+  padding: 0.5em 1em;
 }
 
 .item a {
-    color: white;
-}
-
-.item a:hover {
-    color: #6464ff;
-    transition: .5s ease;
+  color: white;
 }
 
 .footer p {
-    font-size: .7em;
+  font-size: 0.7em;
+}
+
+.item:hover {
+  transition: 0.2s ease-in-out;
+  transform: scale(1.2);
+}
+
+.instagram:hover {
+  color: #c13584;
+}
+
+.linkedin:hover {
+  color: #0e76a8;
 }

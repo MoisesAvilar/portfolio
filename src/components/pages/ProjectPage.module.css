@@ -1,16 +1,22 @@
-.title {
-  font-size: 1.6em;
-}
-
-.projects {
+.projectsContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 320px;
+  text-align: justify;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--body_background);
+  border: 1px solid var(--border_color);
+  border-radius: 10px;
   margin-bottom: 1em;
-  padding-bottom: 1em;
-  padding: 0 .6em;
+  padding: 1.5em;
+  margin: 4em 1.2em;
+}
 
+.projectsContainer h1 {
+  font-size: 2em;
+  margin-top: 1em;
+  margin-bottom: 2em;
 }
 
 .project {
@@ -21,13 +27,16 @@
   margin-bottom: 1em;
 }
 
-.project .h2 {
-  text-align: center;
+.project h1 {
+  margin-bottom: 0.5em;
+}
+
+.project h2 {
+  margin-bottom: 0.5em;
 }
 
 .project h5 {
-  margin-top: -20px;
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
 }
 
 .description {
@@ -37,7 +46,6 @@
 }
 
 .list {
-  margin-top: .5em;
   line-height: 2;
 }
 
@@ -104,25 +112,7 @@
   margin: 1em;
 }
 
-.projects_button_container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.projects_button {
-  font-size: large;
-  background-color: #6464ff;
-  color: white;
-  border: none;
-  border-radius: 0.5em;
-  padding: 0.5em;
-  margin: 1.5em;
-  cursor: pointer;
-}
-
-.projects_button:hover, .link:hover {
+.link:hover {
   background-color: #3131fa;
   transition: .5s ease;
   transform: scale(1.2);
@@ -130,8 +120,28 @@
 
 .divider {
   width: 90%;
-  margin: 1.5em auto;
+  margin: 1em auto;
   border: 0;
   height: 1px;
   background-color: #6464ff5e;
+}
+
+.not_available {
+  position: relative;
+  opacity: 0.5;
+}
+
+.tip {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  background-color: #ffffffc4;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.not_available:hover .tip {
+  display: block;
+  color: black;
 }

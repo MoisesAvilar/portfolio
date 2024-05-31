@@ -5,19 +5,19 @@
     align-items: center;
     text-align: justify;
     width: 350px;
-    background-color: #030011;
-    border: 1px solid #6464ff5e;
+    background-color: var(--body_background);
+    border: 1px solid var(--border_color);
     border-radius: 10px;
     margin-bottom: 1em;
 }
 
 .about_meContainer h2,
 .projectsContainer h2 {
-    margin: .5em;
-    margin-bottom: 1em;
+    margin: 1.5em;
 }
 
 .about_meContainer p,
 .projectsContainer p {
     margin: .5em;
+    color: var(--body_color);
 }

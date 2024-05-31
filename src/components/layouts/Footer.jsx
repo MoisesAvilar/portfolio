@@ -12,6 +12,7 @@ function Footer() {
             to="https://www.linkedin.com/in/moisés-avilar"
             target="_blank"
             rel="noopener noreferrer"
+            className={styles.linkedin}
           >
             <FaLinkedin />
           </Link>
@@ -21,6 +22,7 @@ function Footer() {
             to="https://github.com/MoisesAvilar"
             target="_blank"
             rel="noopener noreferrer"
+            className={styles.github}
           >
             <FaGithub />
           </Link>
@@ -30,6 +32,7 @@ function Footer() {
             to="https://www.instagram.com/avilarmoises/"
             target="_blank"
             rel="noopener noreferrer"
+            className={styles.instagram}
           >
             <FaInstagram />
           </Link>
@@ -39,6 +42,7 @@ function Footer() {
             to="mailto:moisesavilar0@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
+            className={styles.email}
           >
             <MdEmail />
           </Link>
