@@ -44,7 +44,8 @@
 
 .darkmode {
   position: fixed;
-  left: 270px;
+  right: 0;
+  margin-right: 1em;
 }
 
 @media only screen and (min-width: 768px) { 
@@ -55,9 +56,5 @@
   .list {
     height: 2em;
     padding-left: 20px;
-  }
-
-  .darkmode {
-    left: 630px;
   }
 }
