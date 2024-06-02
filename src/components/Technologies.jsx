@@ -32,7 +32,7 @@ function Technologies() {
         </li>
         <li className={styles.item}>
           <img src={icons.nodejs} alt="Node.js" />
-          <span>Node</span>.js
+          <span>Node.js</span>
         </li>
         <li className={styles.item}>
           <img src={icons.html5} alt="HTML5" />

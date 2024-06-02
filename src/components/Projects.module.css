@@ -135,3 +135,17 @@
   height: 1px;
   background-color: #6464ff5e;
 }
+
+@media only screen and (min-width: 768px) {
+  .projects {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    padding: 0 1.6em;
+  }
+
+  .projects_button {
+    font-size: 1em;
+  }
+}
