@@ -45,14 +45,20 @@
   margin-bottom: 1em;
 }
 
-.list {
+.containerList li {
   line-height: 2;
 }
 
-.project .images {
+.containerList p {
+  text-align: center;
+  margin: 1em 0;
+}
+
+.images {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 1.5em;
 }
 
 .project .image_list {

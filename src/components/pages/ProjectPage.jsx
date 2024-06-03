@@ -11,20 +11,28 @@ function ProjectPage() {
         <h2>API CeicaCake</h2>
         <h5>(Em andamento)</h5>
         <p className={styles.description}>
-          Este projeto é uma API Django RESTful para gerenciamento de clientes e
-          vendas.
+          API RESTful para gerenciamento de clientes e vendas da loja de doces
+          da minha mãe.
         </p>
-        <p>O que aprendi com esse projeto:</p>
-        <ul className={styles.list}>
-          <li>Gerenciamento de clientes e vendas;</li>
-          <li>API RESTful com autenticação via JWT;</li>
-          <li>Uso de serializers;</li>
-          <li>Uso do Postman para testes de rotas e funcionalidades;</li>
-          <li>
-            Personalização do painel de administrador do Django, criando novos
-            recursos e customizações.
-          </li>
-        </ul>
+        <div className={styles.containerList}>
+          <ul>
+            <p>O que aprendi com esse projeto:</p>
+            <li>Gerenciamento de clientes e vendas;</li>
+            <li>API RESTful com autenticação via JWT;</li>
+            <li>Uso de serializers;</li>
+            <li>Uso do Postman para testes de rotas e funcionalidades;</li>
+            <li>
+              Personalização do painel de administrador do Django, criando novos
+              recursos e customizações.
+            </li>
+          </ul>
+          <p>O que pretendo fazer:</p>
+          <ul>
+            <li>Integração com o frontend;</li>
+            <li>Novos recursos e customizações;</li>
+            <li>Uso de serializers.</li>
+          </ul>
+        </div>
         <div className={styles.images}>
           <ul className={styles.image_list}>
             <li className={styles.image}>
@@ -76,14 +84,27 @@ function ProjectPage() {
           Aplicação Django projetada para auxiliar no controle de gastos mensais
           e no gerenciamento financeiro pessoal.
         </p>
-        <p className={styles.description}>
-          Essa aplicação foi pensada desde o início com intuito de por em
-          prática o conhecimento adquirido em Django e HTML e CSS. Sendo
-          desenvolvido inteiramente em Django sem auxilio de framework para
-          frontend, foi meu primeiro contato com HTML e CSS em um projeto.
-          Utilizei a documentação como base e estruturei o frontend utilizando{" "}
-          <em>django template language.</em>
-        </p>
+        <div className={styles.containerList}>
+          <p>O que aprendi com esse projeto:</p>
+          <ul>
+            <li>
+              Foi o primeiro projeto que utilizei os conhecimentos de HTML e
+              CSS;
+            </li>
+            <li>
+              Utilização do <em>django template language</em>;
+            </li>
+            <li>Deploy e hosting.</li>
+          </ul>
+          <p>O que pretendo fazer:</p>
+          <ul>
+            <li>Adição de novas categorias;</li>
+            <li>Otimizar o uso e experiencia do usuário;</li>
+            <li>Criar funcionalidade de busca e filtros;</li>
+            <li>Possibilidade de criar relatórios com base em dados;</li>
+            <li>Reestruturar o frontend.</li>
+          </ul>
+        </div>
         <div className={styles.usedTechnologies}>
           <h2 className={styles.h2}>Tecnologias utilizadas</h2>
           <ul className={styles.technologies}>
@@ -131,23 +152,39 @@ function ProjectPage() {
         <h2>Portfólio</h2>
         <h5>(Em andamento)</h5>
         <p className={styles.description}>
-          Devido a minha experiência com CSS no projeto{" "}
-          <em>Gerenciamento FInanceiro</em>, acabei por não gostar muito de
-          frontend pois achei um pouco complexo o conceito de tornar o projeto
-          responsivo. Então comecei a ver um pouco sobre Node.js pra ter uma boa
-          base e em seguida comecei a aprender React.
-        </p>
-        <p className={styles.description}>
           Esse projeto é resultado do que eu aprendi inicialmente sobre CSS e a
-          utilização do framework React como framework de front-end.
+          utilização do framework React como framework front-end.
         </p>
+        <div className={styles.containerList}>
+          <p>O que aprendi com esse projeto:</p>
+          <ul>
+            <li>Usar o recurso de SPA do React;</li>
+            <li>
+              Entendi sobre componentização e renderização de componentes React;
+            </li>
+            <li>Adaptação à sintaxe do JavaScript e Node.js;</li>
+            <li>Transições e animações em CSS e com a biblioteca AOS.</li>
+          </ul>
+        </div>
         <div className={styles.usedTechnologies}>
           <h2 className={styles.h2}>Tecnologias utilizadas</h2>
           <ul className={styles.technologies}>
-            <li className={styles.icon}><img src={icons.nodejs} alt="nodejs" /><span>Node.js</span></li>
-            <li className={styles.icon}><img src={icons.react} alt="react" /><span>React</span></li>
-            <li className={styles.icon}><img src={icons.html5} alt="html5" /><span>HTML5</span></li>
-            <li className={styles.icon}><img src={icons.css3} alt="css3" /><span>CSS3</span></li>
+            <li className={styles.icon}>
+              <img src={icons.nodejs} alt="nodejs" />
+              <span>Node.js</span>
+            </li>
+            <li className={styles.icon}>
+              <img src={icons.react} alt="react" />
+              <span>React</span>
+            </li>
+            <li className={styles.icon}>
+              <img src={icons.html5} alt="html5" />
+              <span>HTML5</span>
+            </li>
+            <li className={styles.icon}>
+              <img src={icons.css3} alt="css3" />
+              <span>CSS3</span>
+            </li>
           </ul>
         </div>
         <a href="/" className={styles.not_available}>
@@ -168,24 +205,33 @@ function ProjectPage() {
         <h2>Controle de Vendas</h2>
         <h5>(Concluído)</h5>
         <p className={styles.description}>
-          Foi a ideia que tive para um site de gestão de estoque e vendas de uma
-          empresa antes de saber sobre desenvolvimento web. Eu não queria deixar
-          a ideia morrer entao decidi criar um software usando a biblioteca
-          PySimpleGui, já que eu havia feito algumas coisas com ele antes.
+          Software para controle de vendas e estoque.
         </p>
-        <p className={styles.description}>
-          Basicamente o usuario cadastra produtos em uma tabela, e em seguida
-          ele pode registrar vendas detalhando os itens vendidos e quem foram os
-          vendedores. O sistema subtrai automaticamente a quantidade vendida dos
-          itens em estoque e impede a venda de itens que nao estiverem em
-          estoque.
-        </p>
+        <div className={styles.containerList}>
+          <p>O que aprendi com esse projeto:</p>
+          <ul>
+            <li>Uso do framework PySimpleGUI;</li>
+            <li>Uso do SQL language;</li>
+            <li>Manipular dados usando SQL queries;</li>
+            <li>Funcionamento de janelas pop-up e alertas de erro;</li>
+            <li>Múltiplas janelas do software.</li>
+            </ul>
+        </div>
         <div className={styles.usedTechnologies}>
           <h2 className={styles.h2}>Tecnologias utilizadas</h2>
           <ul className={styles.technologies}>
-            <li className={styles.icon}><img src={icons.python} alt="python" /><span>Python</span></li>
-            <li className={styles.icon}><img src={icons.sqlite} alt="sqlite" /><span>SQLite3</span></li>
-            <li className={styles.icon}><img src={icons.pysimplegui} alt="pysimplegui" /><span>PySimpleGUI</span></li>
+            <li className={styles.icon}>
+              <img src={icons.python} alt="python" />
+              <span>Python</span>
+            </li>
+            <li className={styles.icon}>
+              <img src={icons.sqlite} alt="sqlite" />
+              <span>SQLite3</span>
+            </li>
+            <li className={styles.icon}>
+              <img src={icons.pysimplegui} alt="pysimplegui" />
+              <span>PySimpleGUI</span>
+            </li>
           </ul>
         </div>
         <a

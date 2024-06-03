@@ -54,11 +54,11 @@
   }
 
   .list {
-    height: 2em;
+    height: 1em;
     padding-left: 20px;
   }
 
   .darkmode {
-    top: 20px;
+    top: 8px;
   }
 }

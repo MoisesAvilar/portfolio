@@ -1,3 +1,22 @@
+::-webkit-scrollbar {
+  width: 12px; 
+}
+
+::-webkit-scrollbar-track {
+  background: var(--border_color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffffff9d;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--link_color);
+  border: 1px solid white;
+}
+
+
 :root {
   --body_background: #d4d4d4;
   --body_color: #030011;
@@ -29,5 +48,11 @@ body {
 @media only screen and (min-width: 768px) {
   html {
     font-size: 1.7em;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  html {
+    font-size: 1.3em;
   }
 }
