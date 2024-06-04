@@ -4,16 +4,18 @@
     flex-direction: column;
     align-items: center;
     text-align: justify;
-    max-width: 1200px;
+    width: 90vw;
     background-color: var(--body_background);
     border: 1px solid var(--border_color);
     border-radius: 10px;
     margin-bottom: 1em;
+    padding: 1.5em;
 }
 
 .about_meContainer h2,
 .projectsContainer h2 {
-    margin: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 2em;
 }
 
 .about_meContainer p,
@@ -25,6 +27,13 @@
 @media only screen and (min-width: 768px) {
     .about_meContainer,
     .projectsContainer {
-        width: 100%;
+        width: 90vw;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .about_meContainer,
+    .projectsContainer {
+        width: 70vw;
     }
 }

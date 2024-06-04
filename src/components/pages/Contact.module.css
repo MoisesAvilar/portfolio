@@ -10,7 +10,7 @@
 .contact fieldset {
   border: none;
   font-size: 1.3em;
-  margin: .5em 0;
+  margin: 1.5em 0;
 }
 
 .contact form {
@@ -61,7 +61,7 @@ textarea::placeholder {
   border: none;
   border-radius: 0.5em;
   padding: 0.5em;
-  margin: 0.5em;
+  margin: .5em;
   cursor: pointer;
 }
 
@@ -75,7 +75,7 @@ textarea::placeholder {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 1em;
+  margin-top: 2.5em;
 }
 
 .details svg {
@@ -87,6 +87,7 @@ textarea::placeholder {
   .contact fieldset {
     margin-top: 2em;
   }
+
   .contact form {
     width: 100%;
     max-width: 700px;
@@ -111,5 +112,9 @@ textarea::placeholder {
 
   .contact button {
     font-size: 1.5em;
+  }
+
+  .details svg {
+    font-size: 35px;
   }
 }

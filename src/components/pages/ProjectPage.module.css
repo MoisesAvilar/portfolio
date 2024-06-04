@@ -75,11 +75,17 @@
 .project .image {
   flex: 1 1 calc(100% - 20px); 
   margin: 10px;
+  text-align: center;
 }
 
 .project .image img {
   width: 100%;
   height: auto;
+}
+
+.project .image1 img,
+.project .image2 img {
+  width: 70%;
 }
 
 .usedTechnologies h2 {
@@ -159,5 +165,25 @@
     top: -100px;
     left: -100px;
     width: 350px;
+  }
+
+  .project .image1 img,
+  .project .image2 img {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .project .imagesContainer {
+    display: inline-flex;
+    justify-content: center;
+  }
+
+  .project .image1 img {
+    width: 50%;
+  }
+
+  .project .image2 img {
+    width: 75%;
   }
 }

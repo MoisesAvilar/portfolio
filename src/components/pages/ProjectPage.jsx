@@ -2,6 +2,7 @@ import styles from "../pages/ProjectPage.module.css"
 import icons from "../../assets/icons"
 
 import ceicaImgs from "../../img/projects/api_ceica/api_ceica"
+import gerenciamentoFinanceiroImgs from "../../img/projects/gerenciamento_financeiro/gerenciamento_financeiro"
 
 function ProjectPage() {
   return (
@@ -104,6 +105,30 @@ function ProjectPage() {
             <li>Possibilidade de criar relatórios com base em dados;</li>
             <li>Reestruturar o frontend.</li>
           </ul>
+          <div className={styles.images}>
+            <ul className={styles.image_list}>
+              <div className={styles.imagesContainer}>
+                <li className={`${styles.image} ${styles.image1}`}>
+                  <img
+                    src={gerenciamentoFinanceiroImgs.gerenciamentoFinanceiroImg1}
+                    alt="Foto1"
+                  />
+                </li>
+                <li className={`${styles.image} ${styles.image2}`}>
+                  <img
+                    src={gerenciamentoFinanceiroImgs.gerenciamentoFinanceiroImg2}
+                    alt="Foto2"
+                  />
+                </li>
+              </div>
+              <li className={`${styles.image} ${styles.image3}`}>
+                <img
+                  src={gerenciamentoFinanceiroImgs.gerenciamentoFinanceiroImg3}
+                  alt="Foto3"
+                />
+              </li>
+            </ul>
+          </div>
         </div>
         <div className={styles.usedTechnologies}>
           <h2 className={styles.h2}>Tecnologias utilizadas</h2>
@@ -215,7 +240,7 @@ function ProjectPage() {
             <li>Manipular dados usando SQL queries;</li>
             <li>Funcionamento de janelas pop-up e alertas de erro;</li>
             <li>Múltiplas janelas do software.</li>
-            </ul>
+          </ul>
         </div>
         <div className={styles.usedTechnologies}>
           <h2 className={styles.h2}>Tecnologias utilizadas</h2>
