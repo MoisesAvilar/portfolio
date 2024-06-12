@@ -120,7 +120,7 @@ function Projects() {
         </div>
         <div className={styles.projects_button_container}>
           <h2>Confira meus outros projetos</h2>
-          <Link className={styles.projects_button} to="/projects">
+          <Link to="/projetos" className={styles.projects_button}>
             Ver projetos
           </Link>
         </div>
