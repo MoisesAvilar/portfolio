@@ -1,26 +1,30 @@
-import { useState } from "react"
-import { Link } from "react-router-dom"
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
-import styles from "./NavBar.module.css"
-import Container from "../layouts/Container"
-import Darkmode from "../darkmode/Darkmode"
-import { GiHamburgerMenu } from "react-icons/gi"
+import styles from "./NavBar.module.css";
+import Container from "../layouts/Container";
+import Darkmode from "../darkmode/Darkmode";
 
 function NavBar() {
-  const [menuVisible, setMenuVisible] = useState(true)
+  const [menuVisible, setMenuVisible] = useState(true);
 
   const toggleMenu = () => {
-    setMenuVisible(!menuVisible)
-  }
+    setMenuVisible(!menuVisible);
+  };
+
   return (
     <nav className={styles.navbar}>
       <Container>
         <ul className={styles.list}>
           <li
-            className={`${styles.item} ${styles.hamburger}`}
+            className={`${styles.item} ${styles.hamburger} ${
+              menuVisible ? styles.active : ""
+            }`}
             onClick={toggleMenu}
           >
-            <GiHamburgerMenu />
+            <span></span>
+            <span></span>
+            <span></span>
           </li>
           {menuVisible && (
             <>
@@ -41,7 +45,7 @@ function NavBar() {
         </ul>
       </Container>
     </nav>
-  )
+  );
 }
 
-export default NavBar
+export default NavBar;

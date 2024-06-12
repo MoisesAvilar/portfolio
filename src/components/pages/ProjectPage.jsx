@@ -1,8 +1,10 @@
-import styles from "../pages/ProjectPage.module.css"
-import icons from "../../assets/icons"
+import styles from "../pages/ProjectPage.module.css";
+import icons from "../../assets/icons";
 
-import ceicaImgs from "../../img/projects/api_ceica/api_ceica"
-import gerenciamentoFinanceiroImgs from "../../img/projects/gerenciamento_financeiro/gerenciamento_financeiro"
+import ceicaImgs from "../../img/projects/api_ceica/api_ceica";
+import gerenciamentoFinanceiroImgs from "../../img/projects/gerenciamento_financeiro/gerenciamento_financeiro";
+import controleVendasImgs from "../../img/projects/controle_vendas/controle_vendas";
+import passwordGeneratorImgs from "../../img/projects/password_generator/password_generator";
 
 function ProjectPage() {
   return (
@@ -110,13 +112,17 @@ function ProjectPage() {
               <div className={styles.imagesContainer}>
                 <li className={`${styles.image} ${styles.image1}`}>
                   <img
-                    src={gerenciamentoFinanceiroImgs.gerenciamentoFinanceiroImg1}
+                    src={
+                      gerenciamentoFinanceiroImgs.gerenciamentoFinanceiroImg1
+                    }
                     alt="Foto1"
                   />
                 </li>
                 <li className={`${styles.image} ${styles.image2}`}>
                   <img
-                    src={gerenciamentoFinanceiroImgs.gerenciamentoFinanceiroImg2}
+                    src={
+                      gerenciamentoFinanceiroImgs.gerenciamentoFinanceiroImg2
+                    }
                     alt="Foto2"
                   />
                 </li>
@@ -242,6 +248,18 @@ function ProjectPage() {
             <li>Múltiplas janelas do software.</li>
           </ul>
         </div>
+        <div className={styles.images}>
+          <ul className={styles.image_list}>
+            <div className={styles.imagesContainer}>
+              <li className={styles.image}>
+                <img src={controleVendasImgs.controleVendasImg1} alt="Foto1" />
+              </li>
+              <li className={styles.image}>
+                <img src={controleVendasImgs.controleVendasImg2} alt="Foto2" />
+              </li>
+            </div>
+          </ul>
+        </div>
         <div className={styles.usedTechnologies}>
           <h2 className={styles.h2}>Tecnologias utilizadas</h2>
           <ul className={styles.technologies}>
@@ -268,8 +286,57 @@ function ProjectPage() {
           Ver repositório
         </a>
       </div>
+      <div className={styles.project} data-aos="fade-up">
+        <h2>Gerador de Senhas</h2>
+        <h5>(Concluído)</h5>
+        <p className={styles.description}>
+          Software que crie uma senha aleatória de acordo com o tamanho desejado e salva em um arquivo txt.
+        </p>
+        <div className={styles.containerList}>
+          <p>O que aprendi com esse projeto:</p>
+          <ul>
+            <li>Uso do framework PySimpleGUI;</li>
+            <li>Usar o método with open para salvar arquivos;</li>
+            <li>Funcionamento de janelas pop-up e alertas de erro;</li>
+            <li>Múltiplas janelas do software.</li>
+          </ul>
+        </div>
+        <div className={styles.images}>
+          <ul className={styles.image_list}>
+            <div className={styles.imagesContainer}>
+              <li className={styles.image}>
+                <img src={passwordGeneratorImgs.passwordGeneratorImg1} alt="Foto1" />
+              </li>
+              <li className={styles.image}>
+                <img src={passwordGeneratorImgs.passwordGeneratorImg2} alt="Foto2" />
+              </li>
+            </div>
+          </ul>
+        </div>
+        <div className={styles.usedTechnologies}>
+          <h2 className={styles.h2}>Tecnologias utilizadas</h2>
+          <ul className={styles.technologies}>
+            <li className={styles.icon}>
+              <img src={icons.python} alt="python" />
+              <span>Python</span>
+            </li>
+            <li className={styles.icon}>
+              <img src={icons.pysimplegui} alt="pysimplegui" />
+              <span>PySimpleGUI</span>
+            </li>
+          </ul>
+        </div>
+        <a
+          href="https://github.com/MoisesAvilar/controle-de-vendas/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.link}
+        >
+          Ver repositório
+        </a>
+      </div>
     </section>
-  )
+  );
 }
 
-export default ProjectPage
+export default ProjectPage;

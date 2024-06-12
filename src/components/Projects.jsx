@@ -1,10 +1,12 @@
-import commonStyles from "./common.module.css"
-import styles from "./Projects.module.css"
-import { Link } from "react-router-dom"
+import commonStyles from "./common.module.css";
+import styles from "./Projects.module.css";
+import { Link } from "react-router-dom";
 
-import icons from "../assets/icons"
+import icons from "../assets/icons";
+import ceicaImgs from "../img/projects/api_ceica/api_ceica";
+import gerenciamentoFinanceiroImgs from "../img/projects/gerenciamento_financeiro/gerenciamento_financeiro";
 
-import Technologies from "./Technologies"
+import Technologies from "./Technologies";
 
 function Projects() {
   return (
@@ -14,21 +16,17 @@ function Projects() {
         <div className={styles.project} data-aos="fade-up">
           <h2 className={styles.h2}>API CeicaCake</h2>
           <h5>(Em andamento)</h5>
+          <div className={styles.images}>
+            <ul className={styles.image_list}>
+              <li className={styles.image}>
+                <img src={ceicaImgs.ceicaImg1} alt="Foto 1" />
+              </li>
+            </ul>
+          </div>
           <p className={styles.description}>
             Este projeto é uma API Django RESTful para gerenciamento de clientes
             e vendas.
           </p>
-          <p>O que aprendi com esse projeto:</p>
-          <ul className={styles.list}>
-            <li>Gerenciamento de clientes e vendas;</li>
-            <li>API RESTful com autenticação via JWT;</li>
-            <li>Uso de serializers;</li>
-            <li>Uso do Postman para testes de rotas e funcionalidades;</li>
-            <li>
-              Personalização do painel de administrador do Django, criando novos
-              recursos e customizações.
-            </li>
-          </ul>
           <div className={styles.usedTechnologies}>
             <h2 className={styles.h2}>Tecnologias utilizadas</h2>
             <ul className={styles.technologies}>
@@ -63,19 +61,20 @@ function Projects() {
         <div className={styles.project} data-aos="fade-up">
           <h2 className={styles.h2}>Gerenciamento Financeiro</h2>
           <h5>(Em andamento)</h5>
+          <div className={styles.images}>
+            <ul className={styles.image_list}>
+              <li className={styles.image}>
+                <img
+                  src={gerenciamentoFinanceiroImgs.gerenciamentoFinanceiroImg3}
+                  alt="Foto 1"
+                />
+              </li>
+            </ul>
+          </div>
           <p className={styles.description}>
             Aplicação Django projetada para auxiliar no controle de gastos
             mensais e no gerenciamento financeiro pessoal.
           </p>
-          <p>O que aprendi com esse projeto:</p>
-          <ul className={styles.list}>
-            <li>Estrutura de dados;</li>
-            <li>Sistemas básico de login;</li>
-            <li>
-              Coloquei em prática meu conhecimento de CSS e os conceitos de
-              responsividade.
-            </li>
-          </ul>
           <div className={styles.usedTechnologies}>
             <h2 className={styles.h2}>Tecnologias utilizadas</h2>
             <ul className={styles.technologies}>
@@ -129,7 +128,7 @@ function Projects() {
         <Technologies />
       </div>
     </section>
-  )
+  );
 }
 
-export default Projects
+export default Projects;
