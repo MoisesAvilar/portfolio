@@ -1,12 +1,13 @@
-import { Link } from "react-router-dom"
-import styles from "./Info.module.css"
-import logo from "../img/moises_avilar.jfif"
+import { Link } from "react-router-dom";
+import styles from "./Info.module.css";
+import logo from "../img/moises_avilar.jfif";
 import {
   FaWhatsappSquare,
   FaGithubSquare,
   FaInstagramSquare,
   FaLinkedin,
-} from "react-icons/fa"
+  FaFileDownload,
+} from "react-icons/fa";
 
 function Info() {
   return (
@@ -72,8 +73,9 @@ function Info() {
         </li>
       </div>
       <hr className={styles.divider} />
+      <a href="/Moisés Avilar.pdf" download className={styles.downloadCV}>Baixar currículo <FaFileDownload className={styles.icon} /></a>
     </div>
-  )
+  );
 }
 
-export default Info
+export default Info;
