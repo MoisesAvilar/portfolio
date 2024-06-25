@@ -13,10 +13,17 @@ function ProjectPage() {
       <div className={styles.project} data-aos="fade-up">
         <h2>API CeicaCake</h2>
         <h5>(Em andamento)</h5>
-        <p className={styles.description}>
-          API RESTful para gerenciamento de clientes e vendas da loja de doces
-          da minha mãe.
-        </p>
+        <div className={styles.description}>
+          <p>
+            API RESTful para gerenciamento de clientes e vendas da loja de doces
+            da minha mãe.
+          </p>
+        </div>
+        <div className={styles.containerList}>
+          <p><i>Atualização: 17/06/2024</i></p>
+          <p>Integração com o frontend feito em React.js</p>
+          <p>Funcionalidade de selecionar múltiplas vendas</p>
+        </div>
         <div className={styles.containerList}>
           <ul>
             <p>O que aprendi com esse projeto:</p>
@@ -31,9 +38,7 @@ function ProjectPage() {
           </ul>
           <p>O que pretendo fazer:</p>
           <ul>
-            <li>Integração com o frontend;</li>
-            <li>Novos recursos e customizações;</li>
-            <li>Uso de serializers.</li>
+            <li>Novas funções para gerenciar fluxo de caixa.</li>
           </ul>
         </div>
         <div className={styles.images}>
@@ -83,10 +88,18 @@ function ProjectPage() {
       <div className={styles.project} data-aos="fade-up">
         <h2>Gerenciamento Financeiro</h2>
         <h5>(Em andamento)</h5>
-        <p className={styles.description}>
-          Aplicação Django projetada para auxiliar no controle de gastos mensais
-          e no gerenciamento financeiro pessoal.
-        </p>
+        <div className={styles.description}>
+          <p>
+            Aplicação Django projetada para auxiliar no controle de gastos mensais
+            e no gerenciamento financeiro pessoal.
+          </p>
+        </div>
+        <div className={styles.containerList}>
+          <p><i>Atualização: 21/06/2024</i></p>
+          <p>Adicionei uma nova aplicação responsável por cadastro de renda extra</p>
+          <p>Otimizei o uso e experiencia do usuário</p>
+          <p>Reestruturei o frontend.</p>
+        </div>
         <div className={styles.containerList}>
           <p>O que aprendi com esse projeto:</p>
           <ul>
@@ -101,8 +114,6 @@ function ProjectPage() {
           </ul>
           <p>O que pretendo fazer:</p>
           <ul>
-            <li>Adição de novas categorias;</li>
-            <li>Otimizar o uso e experiencia do usuário;</li>
             <li>Criar funcionalidade de busca e filtros;</li>
             <li>Possibilidade de criar relatórios com base em dados;</li>
             <li>Reestruturar o frontend.</li>
@@ -290,7 +301,8 @@ function ProjectPage() {
         <h2>Gerador de Senhas</h2>
         <h5>(Concluído)</h5>
         <p className={styles.description}>
-          Software que crie uma senha aleatória de acordo com o tamanho desejado e salva em um arquivo txt.
+          Software que crie uma senha aleatória de acordo com o tamanho desejado
+          e salva em um arquivo txt.
         </p>
         <div className={styles.containerList}>
           <p>O que aprendi com esse projeto:</p>
@@ -305,10 +317,16 @@ function ProjectPage() {
           <ul className={styles.image_list}>
             <div className={styles.imagesContainer}>
               <li className={styles.image}>
-                <img src={passwordGeneratorImgs.passwordGeneratorImg1} alt="Foto1" />
+                <img
+                  src={passwordGeneratorImgs.passwordGeneratorImg1}
+                  alt="Foto1"
+                />
               </li>
               <li className={styles.image}>
-                <img src={passwordGeneratorImgs.passwordGeneratorImg2} alt="Foto2" />
+                <img
+                  src={passwordGeneratorImgs.passwordGeneratorImg2}
+                  alt="Foto2"
+                />
               </li>
             </div>
           </ul>

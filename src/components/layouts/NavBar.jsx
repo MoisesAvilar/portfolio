@@ -32,10 +32,10 @@ function NavBar() {
                 <Link to={"/"}>Home</Link>
               </li>
               <li className={`${styles.item} ${styles.pages}`}>
-                <Link to={"/contato"}>Contato</Link>
+                <Link to={"/projetos"}>Projetos</Link>
               </li>
               <li className={`${styles.item} ${styles.pages}`}>
-                <Link to={"/projetos"}>Projetos</Link>
+                <Link to={"/contato"}>Contato</Link>
               </li>
             </>
           )}
