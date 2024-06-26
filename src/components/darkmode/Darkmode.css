@@ -102,4 +102,8 @@
 
   .dark_mode_label svg.sun { left: 5px;}
   .dark_mode_label svg.moon { left: 35px;}
+
+  .icon {
+    box-shadow: 0 2px 4px var(--box_shadow);
+  }
 }

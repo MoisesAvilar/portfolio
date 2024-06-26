@@ -3,7 +3,7 @@ import styles from "./Technologies.module.css"
 
 function Technologies() {
   return (
-    <div className={styles.technologies} data-aos="fade-up">
+    <section className={styles.technologies} data-aos="fade-up">
       <h2>Tecnologias que utilizo</h2>
       <ul className={styles.list}>
         <li className={styles.item}>
@@ -51,7 +51,7 @@ function Technologies() {
           <span>PySimpleGUI</span>
         </li>
       </ul>
-    </div>
+    </section>
   )
 }
 

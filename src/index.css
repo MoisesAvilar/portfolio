@@ -23,13 +23,15 @@
   --body_color: #030011;
   --border_color: #6464ffc0;
   --link_color: #6464ff;
+  --link_color_hover: #3131fa;
+  --box_shadow: rgba(0, 0, 0, 0.1);
 }
 
 [data-theme="dark"] {
   --body_background: #030011;
   --body_color: white;
   --body_button_color: #3131fa;
-
+  --box_shadow: rgba(255, 255, 255, 0.2);
 }
 
 * {
@@ -43,7 +45,7 @@ body {
   background-color: var(--body_background);
   color: var(--body_color);
   font-weight: 800;
-  transition: background-color .2s ease-in-out, color .2s ease-in-out;
+  transition: background-color .2s ease-in-out, color .2s ease-in-out, box-shadow .2s ease-in-out;
 }
 
 @media only screen and (min-width: 768px) {

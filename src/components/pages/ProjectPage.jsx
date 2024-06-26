@@ -43,15 +43,17 @@ function ProjectPage() {
         </div>
         <div className={styles.images}>
           <ul className={styles.image_list}>
-            <li className={styles.image}>
-              <img src={ceicaImgs.ceicaImg1} alt="Foto1" />
-            </li>
-            <li className={styles.image}>
-              <img src={ceicaImgs.ceicaImg2} alt="Foto2" />
-            </li>
-            <li className={styles.image}>
-              <img src={ceicaImgs.ceicaImg3} alt="Foto3" />
-            </li>
+            <div className={styles.imagesContainer}>
+            <li className={`${styles.image} ${styles.image1}`}>
+                <img src={ceicaImgs.ceicaImg1} alt="Foto1" />
+              </li>
+              <li className={`${styles.image} ${styles.image2}`}>
+                <img src={ceicaImgs.ceicaImg2} alt="Foto2" />
+              </li>
+              <li className={`${styles.image} ${styles.image3}`}>
+                <img src={ceicaImgs.ceicaImg3} alt="Foto3" />
+              </li>
+            </div>
           </ul>
         </div>
         <div className={styles.usedTechnologies}>
@@ -137,13 +139,13 @@ function ProjectPage() {
                     alt="Foto2"
                   />
                 </li>
+                <li className={`${styles.image} ${styles.image3}`}>
+                  <img
+                    src={gerenciamentoFinanceiroImgs.gerenciamentoFinanceiroImg3}
+                    alt="Foto3"
+                  />
+                </li>
               </div>
-              <li className={`${styles.image} ${styles.image3}`}>
-                <img
-                  src={gerenciamentoFinanceiroImgs.gerenciamentoFinanceiroImg3}
-                  alt="Foto3"
-                />
-              </li>
             </ul>
           </div>
         </div>
@@ -262,10 +264,10 @@ function ProjectPage() {
         <div className={styles.images}>
           <ul className={styles.image_list}>
             <div className={styles.imagesContainer}>
-              <li className={styles.image}>
+            <li className={`${styles.image} ${styles.image1}`}>
                 <img src={controleVendasImgs.controleVendasImg1} alt="Foto1" />
               </li>
-              <li className={styles.image}>
+              <li className={`${styles.image} ${styles.image2}`}>
                 <img src={controleVendasImgs.controleVendasImg2} alt="Foto2" />
               </li>
             </div>
@@ -316,13 +318,13 @@ function ProjectPage() {
         <div className={styles.images}>
           <ul className={styles.image_list}>
             <div className={styles.imagesContainer}>
-              <li className={styles.image}>
+            <li className={`${styles.image} ${styles.image1}`}>
                 <img
                   src={passwordGeneratorImgs.passwordGeneratorImg1}
                   alt="Foto1"
                 />
               </li>
-              <li className={styles.image}>
+              <li className={`${styles.image} ${styles.image2}`}>
                 <img
                   src={passwordGeneratorImgs.passwordGeneratorImg2}
                   alt="Foto2"
@@ -345,7 +347,7 @@ function ProjectPage() {
           </ul>
         </div>
         <a
-          href="https://github.com/MoisesAvilar/controle-de-vendas/"
+          href="https://github.com/MoisesAvilar/password-generator/"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.link}

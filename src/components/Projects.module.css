@@ -1,16 +1,16 @@
 .title {
-  font-size: 1.6em;
+  font-size: 1.7em;
+  margin-bottom: 1.5em;
 }
 
 .projects {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 320px;
+  width: 350px;
   margin-bottom: 1em;
   padding-bottom: 1em;
   padding: 0 1.2em;
-
 }
 
 .project {
@@ -21,13 +21,17 @@
   margin-bottom: 1em;
 }
 
-.project .h2 {
+.project h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
   text-align: center;
 }
 
 .project h5 {
-  margin-top: -20px;
-  margin-bottom: 2em;
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 .description {
@@ -54,7 +58,6 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  border: 1px solid #6464ff5b;
   border-radius: 0.5em;
 }
 
@@ -66,42 +69,54 @@
 .project .image img {
   width: 100%;
   height: auto;
+  box-shadow: 0 2px 4px var(--box_shadow);
+  padding: 1em;
 }
 
-.usedTechnologies h2 {
-  text-align: center;
-  margin-top: 1em;
+.project .usedTechnologies {
+  margin-bottom: 1.5rem;
 }
 
-.technologies {
-  list-style-type: none;
+.project .usedTechnologies h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.project .technologies {
+  list-style: none;
   padding: 0;
-  margin: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  gap: 1rem;
 }
 
-.icon {
+.project .icon {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  margin: 20px;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px var(--box_shadow);
+  gap: 0.5rem;
+  font-size: 1rem;
 }
 
-.icon img {
-  width: 90px;
-  height: auto;
-  margin-bottom: 10px;
+.project .icon img {
+  width: 24px;
+  height: 24px;
 }
 
-.link {
-  background-color: #6464ff;
+.project .link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  width: 100%;
   color: white;
-  border: none;
-  border-radius: 0.5em;
-  padding: 0.5em;
-  margin: 1em;
+  background-color: var(--link_color);
+  text-decoration: none;
+  border-radius: 4px;
 }
 
 .projects_button_container {
@@ -112,40 +127,46 @@
 }
 
 .projects_button {
-  font-size: large;
-  background-color: #6464ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  width: 100%;
   color: white;
-  border: none;
-  border-radius: 0.5em;
-  padding: 0.5em;
-  margin: 1.5em;
-  cursor: pointer;
+  background-color: var(--link_color);
+  text-decoration: none;
+  border-radius: 4px;
 }
 
 .projects_button:hover, .link:hover {
-  background-color: #3131fa;
+  background-color: var(--link_color_hover);
   transition: .5s ease;
-  transform: scale(1.2);
+  transform: scale(1.05);
 }
 
 .divider {
-  width: 90%;
+  width: 100%;
   margin: 1.5em auto;
   border: 0;
   height: 1px;
-  background-color: #6464ff5e;
+  background-color: var(--border_color);
 }
 
 @media only screen and (min-width: 768px) {
   .projects {
-    flex-direction: row;
-    flex-wrap: wrap;
     width: 100%;
     justify-content: center;
-    padding: 0 1.5em;
   }
 
   .projects_button {
     font-size: 1em;
+  }
+
+  .projects_button:hover, .link:hover {
+    background-color: var(--link_color_hover);
+    transition: .5s ease;
+    transform: scale(1.01);
   }
 }
