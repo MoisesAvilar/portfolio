@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./Info.module.css";
-import logo from "../img/moises_avilar.jfif";
+
 import {
   FaWhatsappSquare,
   FaGithubSquare,
@@ -13,7 +13,7 @@ function Info() {
   return (
     <div className={styles.head}>
       <Link to={"/"}>
-        <img src={logo} alt="Moisés Avilar" className={styles.logo} />
+        <img src={'/moises_avilar.jfif'} alt="Moisés Avilar" className={styles.logo} />
       </Link>
       <h1>Moisés Avilar</h1>
       <p>
