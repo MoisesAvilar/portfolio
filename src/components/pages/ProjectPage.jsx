@@ -1,3 +1,6 @@
+import AOS from "aos";
+import { useEffect } from "react";
+
 import styles from "../pages/ProjectPage.module.css";
 import icons from "../../assets/icons";
 
@@ -7,9 +10,21 @@ import controleVendasImgs from "../../img/projects/controle_vendas/controle_vend
 import passwordGeneratorImgs from "../../img/projects/password_generator/password_generator";
 
 function ProjectPage() {
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
+  const handleScrollToTop = (event) => {
+    event.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
   return (
     <section className={styles.projectsContainer}>
-      <h1 data-aos="fade-up">Projetos</h1>
+      <h1 data-aos="fade-up" id="top">Projetos</h1>
       <div className={styles.project} data-aos="fade-up">
         <h2>API CeicaCake</h2>
         <h5>(Em andamento)</h5>
@@ -231,9 +246,13 @@ function ProjectPage() {
             </li>
           </ul>
         </div>
-        <a href="/" className={styles.not_available}>
+        <a
+          href="#top"
+          onClick={handleScrollToTop}
+          className={`${styles.link} ${styles.tip}`}
+          title="Você já está no repositório!"
+        >
           Ver projeto
-          <p className={styles.tip}>Você já está no portfolio!</p>
         </a>
         <a
           href="https://github.com/MoisesAvilar/portfolio/"
