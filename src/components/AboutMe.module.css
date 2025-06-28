@@ -1,46 +1,73 @@
 .about_me {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 350px;
-  margin-bottom: 1em;
-  padding-bottom: 1em;
-  padding: 0 1.2em;
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   width: 100%;
-  margin-bottom: 1em;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .container h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
   text-align: center;
 }
 
+.container h3 {
+  font-size: 1.2rem;
+  margin: 1.2rem 0 0.8rem;
+  align-self: flex-start;
+}
+
 .container p {
-  text-align: justify;
-  text-indent: 1.5em;
-  line-height: 2;
-  margin-bottom: 1em;
+  text-align: left;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  hyphens: auto; /* Quebra de palavras melhorada */
 }
 
-@media only screen and (min-width: 768px) {
+/* Ajustes para tablets */
+@media only screen and (min-width: 600px) {
   .about_me {
-    width: 100%;
+    padding: 1.5rem;
+  }
+  
+  .container h2 {
+    font-size: 1.8rem;
+  }
+  
+  .container p {
+    font-size: 1rem;
+    line-height: 1.8;
   }
 }
 
-@media only screen and (min-width: 1024px) {
+/* Ajustes para desktops */
+@media only screen and (min-width: 900px) {
   .about_me {
-    width: 80%;
+    padding: 2rem;
   }
-
+  
   .container h2 {
     font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .container h3 {
+    font-size: 1.4rem;
+    margin: 1.5rem 0 1rem;
+  }
+  
+  .container p {
+    font-size: 1.05rem;
+    line-height: 1.9;
   }
 }

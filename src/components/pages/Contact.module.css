@@ -7,6 +7,41 @@
   width: 100%;
 }
 
+.successMessage {
+  color: green;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid green;
+  background-color: #e6ffe6;
+  border-radius: 5px;
+}
+
+.errorMessage {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid red;
+  background-color: #ffe6e6;
+  border-radius: 5px;
+}
+
+.contact p.ValidationError {
+  color: red;
+  font-size: 0.85em;
+  margin-top: 5px;
+}
+
+.contact .ValidationError {
+  color: red;
+  font-size: 0.85em;
+  margin-top: 5px;
+  text-align: left;
+}
+
 .contact fieldset {
   border: none;
   font-size: 1.5em; 

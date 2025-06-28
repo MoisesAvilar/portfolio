@@ -44,7 +44,6 @@
 body {
   background-color: var(--body_background);
   color: var(--body_color);
-  font-weight: 800;
   transition: background-color .2s ease-in-out, color .2s ease-in-out, box-shadow .2s ease-in-out;
 }
 
