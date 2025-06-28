@@ -1,128 +1,102 @@
-import styles from "./Projects.module.css";
 import { Link } from "react-router-dom";
-
+import styles from "./Projects.module.css";
 import icons from "../assets/icons";
 import ceicaImgs from "../img/projects/api_ceica/api_ceica";
 import gerenciamentoFinanceiroImgs from "../img/projects/gerenciamento_financeiro/gerenciamento_financeiro";
-
 import Technologies from "./Technologies";
+
+const projectsData = [
+  {
+    id: 1,
+    title: "API CeicaCake",
+    status: "Em andamento",
+    description: "API Django RESTful para gerenciamento de clientes e vendas.",
+    image: ceicaImgs.ceicaImg1,
+    technologies: [
+      { icon: icons.python, name: "Python" },
+      { icon: icons.django, name: "Django" },
+      { icon: icons.postgresql, name: "PostgreSQL" },
+      { icon: icons.postman, name: "Postman" }
+    ],
+    links: [
+      { url: "https://github.com/MoisesAvilar/ceica_cake/", label: "Ver repositório" }
+    ]
+  },
+  {
+    id: 2,
+    title: "Gerenciamento Financeiro",
+    status: "Em andamento",
+    description: "Aplicação Django para controle de gastos mensais e gerenciamento financeiro pessoal.",
+    image: gerenciamentoFinanceiroImgs.gerenciamentoFinanceiroImg3,
+    technologies: [
+      { icon: icons.python, name: "Python" },
+      { icon: icons.django, name: "Django" },
+      { icon: icons.postgresql, name: "PostgreSQL" },
+      { icon: icons.html5, name: "HTML5" },
+      { icon: icons.css3, name: "CSS3" }
+    ],
+    links: [
+      { url: "https://expenses.pythonanywhere.com/", label: "Ver projeto" },
+      { url: "https://github.com/MoisesAvilar/gerenciamento-financeiro/", label: "Ver repositório" }
+    ]
+  }
+];
 
 function Projects() {
   return (
     <section className={styles.projects}>
       <h2 className={styles.title}>Projetos em Destaque</h2>
-      <div className={styles.project} data-aos="fade-up">
-        <h2>API CeicaCake</h2>
-        <h5>(Em andamento)</h5>
-        <div className={styles.images}>
-          <ul className={styles.image_list}>
-            <li className={styles.image}>
-              <img src={ceicaImgs.ceicaImg1} alt="Foto 1" />
-            </li>
-          </ul>
+      
+      {projectsData.map((project) => (
+        <div key={project.id} className={styles.project} data-aos="fade-up">
+          <div className={styles.projectHeader}>
+            <h2>{project.title}</h2>
+            <span className={styles.status}>{project.status}</span>
+          </div>
+          
+          <div className={styles.projectImage}>
+            <img src={project.image} alt={`${project.title} screenshot`} />
+          </div>
+          
+          <p className={styles.description}>{project.description}</p>
+          
+          <div className={styles.technologies}>
+            <h3>Tecnologias utilizadas</h3>
+            <ul className={styles.techList}>
+              {project.technologies.map((tech, index) => (
+                <li key={index} className={styles.techItem}>
+                  <img src={tech.icon} alt={tech.name} />
+                  <span>{tech.name}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          
+          <div className={styles.links}>
+            {project.links.map((link, index) => (
+              <a
+                key={index}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.link}
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+          
+          <hr className={styles.divider} />
         </div>
-        <p className={styles.description}>
-          Este projeto é uma API Django RESTful para gerenciamento de clientes e
-          vendas.
-        </p>
-        <div className={styles.usedTechnologies}>
-          <h2 className={styles.h2}>Tecnologias utilizadas</h2>
-          <ul className={styles.technologies}>
-            <li className={styles.icon}>
-              <img src={icons.python} alt="python" />
-              <span>Python</span>
-            </li>
-            <li className={styles.icon}>
-              <img src={icons.django} alt="django" />
-              <span>Django</span>
-            </li>
-            <li className={styles.icon}>
-              <img src={icons.postgresql} alt="postgresql" />
-              <span>PostgreSQL</span>
-            </li>
-            <li className={styles.icon}>
-              <img src={icons.postman} alt="postman" />
-              <span>Postman</span>
-            </li>
-          </ul>
-        </div>
-        <a
-          href="https://github.com/MoisesAvilar/ceica_cake/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.link}
-        >
-          Ver repositório
-        </a>
-        <hr className={styles.divider} data-aos="fade-up" />
-      </div>
-      <div className={styles.project} data-aos="fade-up">
-        <h2 className={styles.h2}>Gerenciamento Financeiro</h2>
-        <h5>(Em andamento)</h5>
-        <div className={styles.images}>
-          <ul className={styles.image_list}>
-            <li className={styles.image}>
-              <img
-                src={gerenciamentoFinanceiroImgs.gerenciamentoFinanceiroImg3}
-                alt="Foto 1"
-              />
-            </li>
-          </ul>
-        </div>
-        <p className={styles.description}>
-          Aplicação Django projetada para auxiliar no controle de gastos mensais
-          e no gerenciamento financeiro pessoal.
-        </p>
-        <div className={styles.usedTechnologies}>
-          <h2 className={styles.h2}>Tecnologias utilizadas</h2>
-          <ul className={styles.technologies}>
-            <li className={styles.icon}>
-              <img src={icons.python} alt="python" />
-              <span>Python</span>
-            </li>
-            <li className={styles.icon}>
-              <img src={icons.django} alt="django" />
-              <span>Django</span>
-            </li>
-            <li className={styles.icon}>
-              <img src={icons.postgresql} alt="postgresql" />
-              <span>PostgreSQL</span>
-            </li>
-            <li className={styles.icon}>
-              <img src={icons.html5} alt="html5" />
-              <span>HTML5</span>
-            </li>
-            <li className={styles.icon}>
-              <img src={icons.css3} alt="css3" />
-              <span>CSS3</span>
-            </li>
-          </ul>
-        </div>
-        <a
-          href="https://expenses.pythonanywhere.com/"
-          target="_blank"
-          rel="noreferrer"
-          className={styles.link}
-        >
-          Ver projeto
-        </a>
-        <a
-          href="https://github.com/MoisesAvilar/gerenciamento-financeiro/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.link}
-        >
-          Ver repositório
-        </a>
-        <hr className={styles.divider} data-aos="fade-up" />
-      </div>
-      <div className={styles.projects_button_container}>
+      ))}
+      
+      <div className={styles.moreProjects}>
         <h2>Confira meus outros projetos</h2>
-        <Link to="/projetos" className={styles.projects_button}>
-          Ver projetos
+        <Link to="/projetos" className={styles.button}>
+          Ver todos os projetos
         </Link>
       </div>
-      <hr className={styles.divider} />
+      
       <Technologies />
     </section>
   );

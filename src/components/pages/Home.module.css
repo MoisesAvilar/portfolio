@@ -1,8 +1,60 @@
-.bio {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 4em;
+.homeContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  color: var(--body_color);
+  background-color: var(--body_background);
+  overflow-x: hidden;
+}
+
+.heroSection {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  position: relative;
+}
+
+.projectsSection,
+.aboutSection {
+  width: 100%;
+  padding: 4rem 1rem;
+  max-width: 1200px;
+}
+
+/* Efeitos de gradiente para as seções */
+.heroSection::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to bottom, 
+    rgba(var(--gradient-start), 0.1) 0%,
+    rgba(var(--gradient-end), 0) 100%);
+  z-index: 1;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+  .heroSection {
+    padding: 2rem;
+  }
+
+  .projectsSection,
+  .aboutSection {
+    padding: 5rem 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .projectsSection,
+  .aboutSection {
+    padding: 6rem 2rem;
+  }
 }

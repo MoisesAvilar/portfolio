@@ -1,172 +1,217 @@
-.title {
-  font-size: 1.7em;
-  margin-bottom: 1.5em;
-}
-
 .projects {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 350px;
-  margin-bottom: 1em;
-  padding-bottom: 1em;
-  padding: 0 1.2em;
+  gap: 2rem;
 }
 
-.project {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 1em;
-}
-
-.project h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+.title {
+  font-size: 1.8rem;
   text-align: center;
-}
-
-.project h5 {
-  font-size: 1rem;
-  color: #888;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-.description {
-  text-indent: 1.5em;
-  line-height: 2;
-  margin-bottom: 1em;
-}
-
-.list {
-  margin-top: .5em;
-  line-height: 2;
-}
-
-.project .images {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.project .image_list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  border-radius: 0.5em;
-}
-
-.project .image {
-  flex: 1 1 calc(100% - 20px); 
-  margin: 10px;
-}
-
-.project .image img {
-  width: 100%;
-  height: auto;
-  box-shadow: 0 2px 4px var(--box_shadow);
-  padding: 1em;
-}
-
-.project .usedTechnologies {
+  color: var(--link_color);
   margin-bottom: 1.5rem;
 }
 
-.project .usedTechnologies h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+.project {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid var(--border_color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
-.project .technologies {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
-.project .icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px var(--box_shadow);
-  gap: 0.5rem;
-  font-size: 1rem;
-}
-
-.project .icon img {
-  width: 24px;
-  height: 24px;
-}
-
-.project .link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1rem;
-  padding: 0.5rem 1rem;
-  width: 100%;
-  color: white;
-  background-color: var(--link_color);
-  text-decoration: none;
-  border-radius: 4px;
-}
-
-.projects_button_container {
+.projectHeader {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 1rem;
+}
+
+.projectHeader h2 {
+  font-size: 1.5rem;
+  margin-bottom:0.5rem;
+  color: var(--link_color);
+}
+
+.status {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  background: rgba(255, 193, 7, 0.2);
+  color: #ffc107;
+}
+
+.projectImage {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.projectImage img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.project:hover .projectImage img {
+  transform: scale(1.02);
+}
+
+.description {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
   text-align: center;
 }
 
-.projects_button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 1rem;
+.technologies h3 {
+  font-size: 1.2rem;
+  text-align: center;
   margin-bottom: 1rem;
-  padding: 0.5rem 1rem;
-  width: 100%;
-  color: white;
-  background-color: var(--link_color);
-  text-decoration: none;
-  border-radius: 4px;
+  color: var(--link_color);
 }
 
-.projects_button:hover, .link:hover {
-  background-color: var(--link_color_hover);
-  transition: .5s ease;
-  transform: scale(1.05);
+.techList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.techItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  min-width: 70px;
+  transition: all 0.3s ease;
+}
+
+.techItem:hover {
+  background: rgba(100, 100, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+.techItem img {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 0.25rem;
+}
+
+.techItem span {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap:0.5rem;
+}
+
+.link {
+  display: inline-block;
+  padding: 0.75rem;
+  background: var(--link_color);
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.link:hover {
+  background: var(--link_color_hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(100, 100, 255, 0.2);
 }
 
 .divider {
-  width: 100%;
-  margin: 1.5em auto;
   border: 0;
   height: 1px;
-  background-color: var(--border_color);
+  background: var(--border_color);
+  margin: 1.5rem 0;
+  opacity: 0.5;
 }
 
-@media only screen and (min-width: 768px) {
+.moreProjects {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.moreProjects h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--link_color);
+}
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--link_color);
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background: var(--link_color_hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(100, 100, 255, 0.2);
+}
+
+/* Media queries para telas maiores */
+@media (min-width: 768px) {
   .projects {
-    width: 100%;
+    padding: 2rem;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .project {
+    padding: 2rem;
+  }
+
+  .projectImage img {
+    max-height: 250px;
+  }
+
+  .links {
+    flex-direction: row;
     justify-content: center;
   }
 
-  .projects_button {
-    font-size: 1em;
+  .link {
+    min-width: 150px;
   }
+}
 
-  .projects_button:hover, .link:hover {
-    background-color: var(--link_color_hover);
-    transition: .5s ease;
-    transform: scale(1.01);
+@media (min-width: 992px) {
+  .projectImage img {
+    max-height: 300px;
   }
 }
