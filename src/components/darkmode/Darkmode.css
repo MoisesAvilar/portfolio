@@ -11,7 +11,7 @@
   background: #ebebeb;
   border-radius: 200px;
   box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4),
-  inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+    inset 0px -5px 15px rgba(255, 255, 255, 0.4);
   cursor: pointer;
   transition: 0.3s;
   outline: 1px solid #ebebeb;
@@ -78,6 +78,10 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .dark_mode {
+    margin-top: -30px;
+  }
+  
   .dark_mode_label {
     width: 60px;
     height: 30px;
@@ -100,8 +104,12 @@
     top: 5px;
   }
 
-  .dark_mode_label svg.sun { left: 5px;}
-  .dark_mode_label svg.moon { left: 35px;}
+  .dark_mode_label svg.sun {
+    left: 5px;
+  }
+  .dark_mode_label svg.moon {
+    left: 35px;
+  }
 
   .icon {
     box-shadow: 0 2px 4px var(--box_shadow);

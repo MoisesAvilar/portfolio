@@ -1,50 +1,82 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-
 import styles from "./NavBar.module.css";
 import Container from "../layouts/Container";
 import Darkmode from "../darkmode/Darkmode";
 
 function NavBar() {
-  const [menuVisible, setMenuVisible] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const navRef = useRef(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+      if (!isMobile) setMenuOpen(false);
+    };
+
+    const handleClickOutside = (event) => {
+      if (menuOpen && navRef.current && !navRef.current.contains(event.target)) {
+        setMenuOpen(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isMobile, menuOpen]);
 
   const toggleMenu = () => {
-    setMenuVisible(!menuVisible);
+    setMenuOpen(!menuOpen);
   };
 
   return (
-    <nav className={styles.navbar}>
-      <Container>
-        <ul className={styles.list}>
-          <li
-            className={`${styles.item} ${styles.hamburger} ${
-              menuVisible ? styles.active : ""
-            }`}
-            onClick={toggleMenu}
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </li>
-          {menuVisible && (
-            <>
-              <li className={`${styles.item} ${styles.pages}`}>
-                <Link to={"/"}>Home</Link>
+    <>
+      <nav className={styles.navbar} ref={navRef} aria-label="Main navigation">
+        <Container>
+          <div className={styles.navContent}>
+            {isMobile && (
+              <button 
+                className={`${styles.hamburger} ${menuOpen ? styles.active : ''}`}
+                onClick={toggleMenu}
+                aria-expanded={menuOpen}
+                aria-label="Toggle menu"
+              >
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+            )}
+
+            <ul className={`${styles.navList} ${menuOpen ? styles.open : ''}`}>
+              <li className={styles.navItem}>
+                <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
               </li>
-              <li className={`${styles.item} ${styles.pages}`}>
-                <Link to={"/projetos"}>Projetos</Link>
+              <li className={styles.navItem}>
+                <Link to="/projetos" onClick={() => setMenuOpen(false)}>Projetos</Link>
               </li>
-              <li className={`${styles.item} ${styles.pages}`}>
-                <Link to={"/contato"}>Contato</Link>
+              <li className={styles.navItem}>
+                <Link to="/contato" onClick={() => setMenuOpen(false)}>Contato</Link>
               </li>
-            </>
-          )}
-          <li className={styles.darkmode}>
-            <Darkmode />
-          </li>
-        </ul>
-      </Container>
-    </nav>
+            </ul>
+
+            <div className={styles.darkModeToggle}>
+              <Darkmode />
+            </div>
+          </div>
+        </Container>
+      </nav>
+      
+      {/* Overlay para o menu mobile */}
+      <div 
+        className={`${styles.menuOverlay} ${menuOpen && isMobile ? styles.visible : ''}`}
+        onClick={() => setMenuOpen(false)}
+      />
+    </>
   );
 }
 

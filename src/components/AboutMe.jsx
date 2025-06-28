@@ -21,7 +21,7 @@ function AboutMe() {
           Scrum, sempre buscando equilibrar qualidade técnica com prazos
           realistas.
         </p>
-        <h3>Formação e Objetivos</h3>F
+        <h3>Formação e Objetivos</h3>
         <p>
           Comecei meus estudos formais em programação em Setembro de 2023 como
           autodidata. Em Março de 2024 iniciei o curso de Análise e
