@@ -52,6 +52,16 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
+.projectCard:target {
+  animation: highlight 1.5s ease;
+  outline: 2px solid var(--primary-color);
+}
+
+@keyframes highlight {
+  from { background-color: rgba(0, 0, 0, 0.05); }
+  to { background-color: transparent; }
+}
+
 .projectHeader {
   padding: 1.5rem;
   background: rgba(100, 100, 255, 0.1);

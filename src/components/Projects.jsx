@@ -50,13 +50,17 @@ function Projects() {
       {projectsData.map((project) => (
         <div key={project.id} className={styles.project} data-aos="fade-up">
           <div className={styles.projectHeader}>
-            <h2>{project.title}</h2>
+            <Link to={`/projetos#project-${project.id}`} className={styles.projectTitleLink}>
+              <h2>{project.title}</h2>
+            </Link>
             <span className={styles.status}>{project.status}</span>
           </div>
           
-          <div className={styles.projectImage}>
-            <img src={project.image} alt={`${project.title} screenshot`} />
-          </div>
+          <Link to={`/projetos#project-${project.id}`} className={styles.projectImageLink}>
+            <div className={styles.projectImage}>
+              <img src={project.image} alt={`${project.title} screenshot`} />
+            </div>
+          </Link>
           
           <p className={styles.description}>{project.description}</p>
           

@@ -1,5 +1,5 @@
 ::-webkit-scrollbar {
-  width: 12px; 
+  width: 10px; /* Reduzi levemente para ficar mais discreto */
 }
 
 ::-webkit-scrollbar-track {
@@ -9,17 +9,16 @@
 ::-webkit-scrollbar-thumb {
   background: #ffffff9d;
   border: 1px solid var(--border_color);
-  border-radius: 6px;
+  border-radius: 5px; /* Bordas ligeiramente mais suaves */
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--link_color);
-  border: 1px solid white;
+  border-color: var(--body_color); /* Mais consistente com o tema */
 }
 
-
 :root {
-  --body_background: #d4d4d4;
+  --body_background: #f0f0f0; /* Tom mais suave de claro */
   --body_color: #030011;
   --border_color: #6464ffc0;
   --link_color: #6464ff;
@@ -29,9 +28,8 @@
 
 [data-theme="dark"] {
   --body_background: #030011;
-  --body_color: white;
-  --body_button_color: #3131fa;
-  --box_shadow: rgba(255, 255, 255, 0.2);
+  --body_color: #ffffff; /* Branco puro para melhor contraste */
+  --box_shadow: rgba(255, 255, 255, 0.15); /* Sombra mais suave */
 }
 
 * {
@@ -42,19 +40,34 @@
 }
 
 body {
+  font-family: var(--font_primary);
   background-color: var(--body_background);
   color: var(--body_color);
-  transition: background-color .2s ease-in-out, color .2s ease-in-out, box-shadow .2s ease-in-out;
+  transition: 
+    background-color var(--transition_time) ease-in-out, 
+    color var(--transition_time) ease-in-out;
+  line-height: 1.6;
+  min-height: 100vh;
+
 }
 
 @media only screen and (min-width: 768px) {
   html {
-    font-size: 1.7em;
+    font-size: calc(var(--font_size-base) * 1.1);
   }
 }
 
 @media only screen and (min-width: 1024px) {
   html {
-    font-size: 1.3em;
+    font-size: calc(var(--font_size-base) * 1.2);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

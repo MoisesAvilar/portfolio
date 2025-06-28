@@ -8,6 +8,24 @@ import styles from "../pages/ProjectPage.module.css";
 import { projects } from "../../data/projectsData"; 
 
 function ProjectPage() {
+
+    useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    };
+
+    // Executa imediatamente e também quando o hash muda
+    handleHashChange();
+    window.addEventListener('hashchange', handleHashChange);
+
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
@@ -92,6 +110,7 @@ function ProjectPage() {
       <div className={styles.projectsGrid}>
         {projects.map((project) => (
           <article
+            id={`project-${project.id}`}
             key={project.id}
             className={styles.projectCard}
             data-aos="fade-up"

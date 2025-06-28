@@ -15,6 +15,15 @@
   margin-bottom: 1.5rem;
 }
 
+.projectTitleLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.projectTitleLink:hover h2 {
+  text-decoration: underline; /* Efeito de hover no título */
+}
+
 .project {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
@@ -50,6 +59,11 @@
   font-size: 0.8rem;
   background: rgba(255, 193, 7, 0.2);
   color: #ffc107;
+}
+
+.projectImageLink {
+  display: block;
+  cursor: pointer;
 }
 
 .projectImage {
