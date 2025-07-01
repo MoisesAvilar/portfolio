@@ -1,8 +1,15 @@
+
 import { useEffect } from "react"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import { Analytics } from '@vercel/analytics/react';
 import AOS from "aos"
 import "aos/dist/aos.css"
+
+import ReactGA from "react-ga4";
+import RouteChangeTracker from "./components/utils/RouteChangeTracker";
+
+// ID de Métrica
+ReactGA.initialize("G-E6PT00EJBT");
 
 import Home from "./components/pages/Home"
 import Contact from "./components/pages/Contact"
@@ -25,6 +32,7 @@ function App() {
   return (
     <div className="App">
       <Router>
+        <RouteChangeTracker />
         <NavBar />
         <Arrow />
         <Container customClass="min-height">
