@@ -12,7 +12,6 @@ function AboutMe() {
       <div className={styles.aboutContainer} data-aos="fade-up">
         <div className={styles.aboutHeader}>
           <h2>Sobre Mim</h2>
-          <div className={styles.underline}></div>
           <p className={styles.subtitle}>Minha jornada na tecnologia e além</p>
         </div>
 

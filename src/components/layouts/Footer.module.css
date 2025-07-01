@@ -1,8 +1,11 @@
+/* Em Footer.module.css */
 .footer {
-  background-color: var(--footer_bg);
-  color: var(--footer_text);
+  background-color: var(--navbar_background, var(--body_background)); /* Usa a cor da navbar se existir */
+  color: var(--body_color);
   padding: 2rem 1rem;
   border-top: 1px solid var(--border_color);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .container {
@@ -10,20 +13,51 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  gap: 1rem;
+}
+
+.topSection, .bottomSection {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
+  width: 100%;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--link_color);
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: var(--border_color);
+  opacity: 0.3;
+}
+
+.navLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: var(--body_color);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navLinks a:hover {
+  color: var(--link_color);
 }
 
 .socialLinks {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   list-style: none;
   padding: 0;
-  margin: 0;
-}
-
-.socialItem {
-  transition: transform 0.3s ease;
 }
 
 .socialItem a {
@@ -32,60 +66,39 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  color: var(--footer_text);
-  font-size: 1.5rem;
+  color: var(--body_color);
+  font-size: 1.2rem;
   transition: all 0.3s ease;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border_color);
 }
 
-.socialItem:hover {
+.socialItem:hover a {
+  color: white;
+  background: var(--link_color);
+  border-color: var(--link_color);
   transform: translateY(-3px);
-}
-
-.linkedin:hover a {
-  color: #0a66c2;
-  background: rgba(10, 102, 194, 0.1);
-}
-
-.github:hover a {
-  color: #f0f6fc;
-  background: rgba(240, 246, 252, 0.1);
-}
-
-.instagram:hover a {
-  color: #e1306c;
-  background: rgba(225, 48, 108, 0.1);
-}
-
-.email:hover a {
-  color: #ea4335;
-  background: rgba(234, 67, 53, 0.1);
 }
 
 .copyright {
   font-size: 0.9rem;
   opacity: 0.8;
   text-align: center;
-  margin: 0;
+  padding-top: 1rem;
 }
 
+/* Responsividade para Desktop */
 @media (min-width: 768px) {
-  .footer {
-    padding: 2.5rem 1rem;
+  .topSection, .bottomSection {
+    flex-direction: row;
+    justify-content: space-between;
   }
   
-  .socialLinks {
+  .navLinks {
     gap: 2rem;
   }
   
-  .socialItem a {
-    width: 50px;
-    height: 50px;
-    font-size: 1.8rem;
-  }
-  
-  .copyright {
-    font-size: 1rem;
+  .socialLinks {
+    gap: 1.5rem;
   }
 }

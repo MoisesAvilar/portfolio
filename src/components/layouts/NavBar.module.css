@@ -2,7 +2,8 @@
   position: fixed;
   top: -1px;
   width: 100%;
-  background-color: var(--body_background);
+  background-color: var(--navbar_background);
+  backdrop-filter: 10px;
   color: var(--body_color);
   padding: 1rem 1rem;
   box-shadow: 0 2px 4px var(--box_shadow);
@@ -247,6 +248,7 @@
     text-transform: none;
     font-size: 1rem;
     box-shadow: none;
+    backdrop-filter: none;
   }
 
   .navItem a:hover {

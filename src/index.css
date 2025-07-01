@@ -1,5 +1,5 @@
 ::-webkit-scrollbar {
-  width: 10px; /* Reduzi levemente para ficar mais discreto */
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -9,16 +9,18 @@
 ::-webkit-scrollbar-thumb {
   background: #ffffff9d;
   border: 1px solid var(--border_color);
-  border-radius: 5px; /* Bordas ligeiramente mais suaves */
+  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--link_color);
-  border-color: var(--body_color); /* Mais consistente com o tema */
+  border-color: var(--body_color);
 }
 
 :root {
-  --body_background: #f0f0f0; /* Tom mais suave de claro */
+  --navbar_background: rgba(240, 245, 255, 0.75);
+  --body_background: #f0f5ff;
+   --card-background: #ffffff;
   --body_color: #030011;
   --border_color: #6464ffc0;
   --link_color: #6464ff;
@@ -27,9 +29,11 @@
 }
 
 [data-theme="dark"] {
+  --navbar_background: rgba(3, 0, 17, 0.7);
   --body_background: #030011;
-  --body_color: #ffffff; /* Branco puro para melhor contraste */
-  --box_shadow: rgba(255, 255, 255, 0.15); /* Sombra mais suave */
+   --card-background: #0d1117;
+  --body_color: #ffffff;
+  --box_shadow: rgba(255, 255, 255, 0.15);
 }
 
 * {

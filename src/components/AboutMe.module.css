@@ -16,17 +16,9 @@
 }
 
 .aboutHeader h2 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   margin-bottom: 0.5rem;
   color: var(--link_color);
-}
-
-.underline {
-  width: 60px;
-  height: 3px;
-  background: var(--link_color);
-  margin: 0 auto 0.8rem;
-  border-radius: 2px;
 }
 
 .subtitle {
@@ -43,8 +35,7 @@
 }
 
 .aboutCard {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
+  background-color: var(--card-background);
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);

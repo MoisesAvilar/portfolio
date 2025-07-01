@@ -74,23 +74,8 @@
 }
 
 .socialLink:hover {
+  color: var(--link_color);
   transform: translateY(-3px);
-}
-
-.socialLink:nth-child(1):hover {
-  color: #c13584; /* Instagram */
-}
-
-.socialLink:nth-child(2):hover {
-  color: #f0f6fc; /* GitHub */
-}
-
-.socialLink:nth-child(3):hover {
-  color: #0a66c2; /* LinkedIn */
-}
-
-.socialLink:nth-child(4):hover {
-  color: #25d366; /* WhatsApp */
 }
 
 .downloadButton {
@@ -122,12 +107,6 @@
 
 /* Responsividade */
 @media (min-width: 768px) {
-  .heroContent {
-    flex-direction: column;
-    text-align: center;
-    gap: 2rem;
-  }
-
   .profileImage {
     width: 250px;
     height: 250px;
@@ -139,10 +118,6 @@
 
   .textContent h2 {
     font-size: 1.4rem;
-  }
-
-  .socialLinks {
-    justify-content: center;
   }
 }
 

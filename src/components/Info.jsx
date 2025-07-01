@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import AOS from "aos";
-import { Link } from "react-router-dom";
+import { TypeAnimation } from 'react-type-animation';
 import styles from "./Info.module.css";
 import {
   FaWhatsapp,
@@ -9,7 +9,14 @@ import {
   FaLinkedin,
   FaFileDownload,
 } from "react-icons/fa";
-import { FiArrowUpRight } from "react-icons/fi";
+
+// 1. CRIE O ARRAY DE DADOS PARA OS LINKS
+const socialLinksData = [
+  { href: "https://instagram.com/avilarmoises/", label: "Instagram", icon: <FaInstagram /> },
+  { href: "https://github.com/MoisesAvilar", label: "GitHub", icon: <FaGithub /> },
+  { href: "https://linkedin.com/in/moisés-avilar", label: "LinkedIn", icon: <FaLinkedin /> },
+  { href: "https://api.whatsapp.com/send?phone=5573999699511&text=Ol%C3%A1%2C%20vim%20pelo%20seu%20portf%C3%B3lio!", label: "WhatsApp", icon: <FaWhatsapp /> }
+];
 
 function Info() {
   useEffect(() => {
@@ -30,58 +37,43 @@ function Info() {
         <div className={styles.textContent}>
           <h1>Moisés Avilar</h1>
           <h2>
-            Desenvolvedor Backend
-            <span className={styles.divider}>•</span>
-            Estudante de Análise e Desenvolvimento de Sistemas
-          </h2>
+  <TypeAnimation
+    sequence={[
+      'Desenvolvedor Backend',
+      2000,
+      'Estudante de Análise e Desenvolvimento de Sistemas',
+      2000,
+    ]}
+    wrapper="span"
+    speed={50}
+    repeat={Infinity}
+  />
+</h2>
           
+          {/* 2. RENDERIZE OS LINKS USANDO O .map() */}
           <div className={styles.socialLinks}>
-            <a
-              href="https://instagram.com/avilarmoises/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.socialLink}
-              aria-label="Instagram"
-            >
-              <FaInstagram />
-            </a>
-            <a
-              href="https://github.com/MoisesAvilar"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.socialLink}
-              aria-label="GitHub"
-            >
-              <FaGithub />
-            </a>
-            <a
-              href="https://linkedin.com/in/moisés-avilar"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.socialLink}
-              aria-label="LinkedIn"
-            >
-              <FaLinkedin />
-            </a>
-            <a
-              href="https://api.whatsapp.com/send?phone=5573999699511&text=Ol%C3%A1%2C%20vim%20pelo%20seu%20portf%C3%B3lio!"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.socialLink}
-              aria-label="WhatsApp"
-            >
-              <FaWhatsapp />
-            </a>
+            {socialLinksData.map((social, index) => (
+              <a
+                key={index}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.socialLink}
+                aria-label={social.label}
+              >
+                {social.icon}
+              </a>
+            ))}
           </div>
 
-          <a 
+          {/* ... (código do botão de download) ... */}
+                    <a 
             href="/Moisés Avilar.pdf" 
             download 
             className={styles.downloadButton}
           >
             Baixar currículo
             <FaFileDownload className={styles.downloadIcon} />
-            <FiArrowUpRight className={styles.linkIcon} />
           </a>
         </div>
       </div>

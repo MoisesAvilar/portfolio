@@ -1,11 +1,3 @@
-/* Variáveis consistentes com o resto do projeto */
-:root {
-  --tech-spacing: 0.5rem;
-  --tech-border-radius: 8px;
-  --tech-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --tech-transition: all 0.3s ease;
-}
-
 .technologies {
   width: 100%;
   max-width: 1200px;
@@ -20,25 +12,46 @@
   color: var(--link_color);
 }
 
+.categoryTitle {
+  /* Alterado para funcionar com Flexbox */
+  flex-basis: 100%; 
+  font-size: 1.3rem;
+  color: var(--body_color);
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border_color);
+}
+
+.categoryTitle:first-of-type {
+  margin-top: 0;
+}
+
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  /* Alterado para Flexbox */
+  display: flex;
+  flex-wrap: wrap;
   gap: 1.5rem;
   padding: 0 1rem;
 }
 
 .card {
+  /* Propriedades Flex adicionadas */
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 120px; /* Base para telas pequenas */
+
+  /* Estilos visuais mantidos */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 1.5rem 1rem;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border-radius: var(--tech-border-radius);
+  background-color: var(--card-background);
+  border-radius: 8px;
   border: 1px solid var(--border_color);
-  box-shadow: var(--tech-shadow);
-  transition: var(--tech-transition);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .card:hover {
@@ -47,12 +60,13 @@
   background: rgba(100, 100, 255, 0.1);
 }
 
+/* ... O resto dos estilos de .icon, .name, etc., continua igual ... */
 .icon {
   width: 60px;
   height: 60px;
   object-fit: contain;
   margin-bottom: 1rem;
-  transition: var(--tech-transition);
+  transition: all 0.3s ease;
 }
 
 .card:hover .icon {
@@ -66,19 +80,8 @@
   color: var(--body_color);
 }
 
-/* Responsividade */
-@media (max-width: 480px) {
-  .grid {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 1rem;
-  }
-  
-  .icon {
-    width: 50px;
-    height: 50px;
-  }
-}
 
+/* Media Queries simplificados */
 @media (min-width: 768px) {
   .technologies {
     padding: 3rem 2rem;
@@ -88,10 +91,11 @@
     font-size: 2.2rem;
   }
   
-  .grid {
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  /* Apenas ajustamos o tamanho base do card, se desejado */
+  .card {
+    flex-basis: 140px;
   }
-  
+
   .icon {
     width: 70px;
     height: 70px;
@@ -104,7 +108,10 @@
 
 @media (min-width: 1024px) {
   .grid {
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     gap: 2rem;
+  }
+
+  .card {
+    flex-basis: 160px;
   }
 }

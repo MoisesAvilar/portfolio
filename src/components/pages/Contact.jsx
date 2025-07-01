@@ -103,25 +103,21 @@ function Contact() {
               <a href="mailto:moisesavilar0@gmail.com" className={styles.contactCard}>
                 <MdEmail className={styles.contactIcon} />
                 <span>Email</span>
-                <p>moisesavilar0@gmail.com</p>
               </a>
               
               <a href="https://wa.me/5573999699511" target='_blank' rel="noopener noreferrer" className={styles.contactCard}>
                 <FaWhatsapp className={styles.contactIcon} />
                 <span>WhatsApp</span>
-                <p>(73) 99969-9511</p>
               </a>
               
               <a href="https://www.linkedin.com/in/moisés-avilar/" target='_blank' rel="noopener noreferrer" className={styles.contactCard}>
                 <FaLinkedin className={styles.contactIcon} />
                 <span>LinkedIn</span>
-                <p>/in/moisés-avilar/</p>
               </a>
               
               <a href="https://github.com/MoisesAvilar" target='_blank' rel="noopener noreferrer" className={styles.contactCard}>
                 <FaGithub className={styles.contactIcon} />
                 <span>GitHub</span>
-                <p>/MoisesAvilar</p>
               </a>
             </div>
           </div>

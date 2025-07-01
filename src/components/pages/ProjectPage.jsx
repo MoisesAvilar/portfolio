@@ -108,7 +108,7 @@ function ProjectPage() {
       </div>
 
       <div className={styles.projectsGrid}>
-        {projects.map((project) => (
+        {projects.slice().reverse().map((project) => (
           <article
             id={`project-${project.id}`}
             key={project.id}

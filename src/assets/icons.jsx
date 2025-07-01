@@ -9,6 +9,7 @@ import nodejsIcon from "./nodejs-icon.svg"
 import html5Icon from "./html5-icon.svg"
 import css3Icon from "./css3-icon.svg"
 import reactIcon from "./react-icon.svg"
+import typescriptIcon from "./typescript-icon.svg"
 import pysimpleguiIcon from "./pysimplegui-icon.svg"
 
 const icons = {
@@ -23,6 +24,7 @@ const icons = {
   html5: html5Icon,
   css3: css3Icon,
   react: reactIcon,
+  ts: typescriptIcon,
   pysimplegui: pysimpleguiIcon,
 }
 
