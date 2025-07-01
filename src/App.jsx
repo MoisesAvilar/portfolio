@@ -1,24 +1,24 @@
 
-import { useEffect } from "react"
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Analytics } from '@vercel/analytics/react';
-import AOS from "aos"
-import "aos/dist/aos.css"
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import ReactGA from "react-ga4";
 import RouteChangeTracker from "./components/utils/RouteChangeTracker";
 
+import Home from "./components/pages/Home";
+import Contact from "./components/pages/Contact";
+import ProjectPage from "./components/pages/ProjectPage";
+
+import Container from "./components/layouts/Container";
+import NavBar from "./components/layouts/NavBar";
+import Footer from "./components/layouts/Footer";
+import Arrow from "./components/layouts/ScrollToTop";
+
 // ID de Métrica
 ReactGA.initialize("G-E6PT00EJBT");
-
-import Home from "./components/pages/Home"
-import Contact from "./components/pages/Contact"
-import ProjectPage from "./components/pages/ProjectPage"
-
-import Container from "./components/layouts/Container"
-import NavBar from "./components/layouts/NavBar"
-import Footer from "./components/layouts/Footer"
-import Arrow from "./components/layouts/ScrollToTop"
 
 function App() {
   useEffect(() => {
