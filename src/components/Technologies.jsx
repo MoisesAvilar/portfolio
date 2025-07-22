@@ -20,6 +20,7 @@ const technologyCategories = [
       { name: "JavaScript", icon: icons.javascript },
       { name: "HTML5", icon: icons.html5 },
       { name: "CSS3", icon: icons.css3 },
+      { name: "Bootstrap", icon: icons.bootstrap },
     ]
   },
   {

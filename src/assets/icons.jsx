@@ -11,6 +11,7 @@ import css3Icon from "./css3-icon.svg"
 import reactIcon from "./react-icon.svg"
 import typescriptIcon from "./typescript-icon.svg"
 import pysimpleguiIcon from "./pysimplegui-icon.svg"
+import bootstrapIcon from "./bootstrap-icon.svg"
 
 const icons = {
   python: pythonIcon,
@@ -26,6 +27,7 @@ const icons = {
   react: reactIcon,
   ts: typescriptIcon,
   pysimplegui: pysimpleguiIcon,
+  bootstrap: bootstrapIcon,
 }
 
 export default icons

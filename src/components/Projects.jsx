@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import styles from "./Projects.module.css";
 import icons from "../assets/icons";
 import ceicaImgs from "../img/projects/api_ceica/api_ceica";
-import gerenciamentoFinanceiroImgs from "../img/projects/gerenciamento_financeiro/gerenciamento_financeiro";
+import batucadaImgs from "../img/projects/batucada-gestao/batucada-gestao";
 
 const projectsData = [
   {
@@ -26,22 +26,23 @@ const projectsData = [
   },
   {
     id: 2,
-    title: "Gerenciamento Financeiro",
+    title: "Batucada Gestão",
     status: "Em andamento",
     description:
-      "Aplicação Django para controle de gastos mensais e gerenciamento financeiro pessoal.",
-    image: gerenciamentoFinanceiroImgs.gerenciamentoFinanceiroImg3,
+      "Uma plataforma de gerenciamento completo para escolas de música.",
+    image: batucadaImgs.batucadaImg1,
     technologies: [
       { icon: icons.python, name: "Python" },
       { icon: icons.django, name: "Django" },
-      { icon: icons.postgresql, name: "PostgreSQL" },
+      { icon: icons.javascript, name: "JavaScript" },
+      { icon: icons.bootstrap, name: "Bootstrap" },
       { icon: icons.html5, name: "HTML5" },
       { icon: icons.css3, name: "CSS3" },
+      { icon: icons.sqlite, name: "SQLite3" },
     ],
     links: [
-      { url: "https://expenses.pythonanywhere.com/", label: "Ver projeto" },
       {
-        url: "https://github.com/MoisesAvilar/gerenciamento-financeiro/",
+        url: "https://github.com/MoisesAvilar/batucada-gestao/",
         label: "Ver repositório",
       },
     ],

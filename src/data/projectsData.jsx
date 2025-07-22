@@ -4,6 +4,7 @@ import ceicaImgs from "../img/projects/api_ceica/api_ceica";
 import gerenciamentoFinanceiroImgs from "../img/projects/gerenciamento_financeiro/gerenciamento_financeiro";
 import controleVendasImgs from "../img/projects/controle_vendas/controle_vendas";
 import passwordGeneratorImgs from "../img/projects/password_generator/password_generator";
+import batucadaImgs from "../img/projects/batucada-gestao/batucada-gestao";
 
 export const projects = [
   {
@@ -192,6 +193,52 @@ export const projects = [
     links: [
       {
         url: "https://github.com/MoisesAvilar/front_ceicacake",
+        label: "Repositório",
+      },
+    ],
+  },
+  {
+    id: 7,
+    title: "Batucada Gestão",
+    status: "Em andamento",
+    description:
+      "Um sistema de gerenciamento completo para escolas de música, desenvolvido com a arquitetura MVT do Django. A plataforma permite agendar aulas (individuais, em grupo e recorrentes), gerenciar perfis detalhados de alunos e professores, e validar a realização de cada aula através de relatórios de conteúdo. Inclui dashboards analíticos, um sistema de substituição de aulas, acompanhamento em tempo real de desempenho de professores e alunos e filtros avançados para uma gestão eficiente.",
+    learnings: [
+      "Uso avançado do ORM do Django (Annotations, Q & F Objects, Subquery)",
+      "Implementação de lógica de permissões complexas (Admin vs. Professor)",
+      "Componentização de templates no Django para reutilização de código",
+      "Integração de bibliotecas JavaScript (Select2, Chart.js) em um ambiente MVT",
+      "Geração de relatórios dinâmicos em Excel com OpenPyXL",
+    ],
+    goals: [
+      "Refatorar a arquitetura para uma API RESTful com Django REST Framework",
+      "Fragmentar o app monolítico em apps menores e mais coesos",
+      "Desenvolver um frontend desacoplado em React ou Vue.js",
+      "Implementar sistema financeiro para controle de receitas e despesas",
+      "Adicionar funcionalidades de gestão de pagamentos e faturas",
+    ],
+    images: [
+      batucadaImgs.batucadaImg1,
+      batucadaImgs.batucadaImg2,
+      batucadaImgs.batucadaImg3,
+      batucadaImgs.batucadaImg4,
+      batucadaImgs.batucadaImg5,
+      batucadaImgs.batucadaImg6,
+      batucadaImgs.batucadaImg7,
+      batucadaImgs.batucadaImg8,
+    ],
+    technologies: [
+      { icon: icons.python, name: "Python" },
+      { icon: icons.django, name: "Django" },
+      { icon: icons.javascript, name: "JavaScript" },
+      { icon: icons.bootstrap, name: "Bootstrap" },
+      { icon: icons.html5, name: "HTML5" },
+      { icon: icons.css3, name: "CSS3" },
+      { icon: icons.sqlite, name: "SQLite3" },
+    ],
+    links: [
+      {
+        url: "https://github.com/MoisesAvilar/batucada-gestao",
         label: "Repositório",
       },
     ],
