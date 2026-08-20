@@ -1,5 +1,5 @@
 import styles from "./Footer.module.css";
-import { FaLinkedin, FaGithub, FaInstagram , FaArrowUp} from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
 
